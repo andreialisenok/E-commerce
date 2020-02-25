@@ -19,4 +19,4 @@ __MACOSX/
 yarn.lock
 package-lock.json
 dist
-/node_modules
+node_modules
