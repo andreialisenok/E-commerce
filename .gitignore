@@ -4,7 +4,6 @@ ehthumbs.db
 .Saved
 _arc
 bower_components
-node_modules
 .vscode
 .DS_Store
 *.log
@@ -20,4 +19,4 @@ __MACOSX/
 yarn.lock
 package-lock.json
 dist
-
+/node_modules
