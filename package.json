@@ -67,9 +67,6 @@
         "webpack-stream": "^5.2.1",
         "yargs": "^13.2.4"
     },
-    "dependencies": {
-        "smart-grid": "^2.1.2"
-    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
