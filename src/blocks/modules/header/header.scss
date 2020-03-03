@@ -7,9 +7,7 @@
   }
 
   &__bottom {
-    background: #ffffff;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    background: gray;
   }
 
   &__slogan {
@@ -80,18 +78,28 @@
 
 .menu {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 77%;
   margin: 0;
   padding: 0;
 
   &__item {
+    list-style: none;
+    margin: 0;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: red;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    //line-height: 90px;
     font-family: "Geometria-Regular", sans-serif;
     font-weight: 400;
     color: #2e2e2d;
     font-size: 16px;
-    list-style: none;
-    margin: 0;
   }
 }
