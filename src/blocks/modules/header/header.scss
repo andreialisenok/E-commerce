@@ -6,8 +6,14 @@
     padding-bottom: 14px;
   }
 
+  &__logo {
+    margin-right: 70px;
+  }
+
   &__bottom {
-    background: gray;
+    background: #ffffff;
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.22);
+    position: relative;
   }
 
   &__slogan {
@@ -16,64 +22,6 @@
     font-size: 18px;
     color: #ffffff;
   }
-
-  &__logo {
-    display: block;
-    width: 200px;
-    max-width: 100%;
-  }
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-
-  &__item {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    &:not(:first-child) {
-      margin-left: 80px;
-    }
-  }
-
-  &__link {
-    font-family: "Geometria-Regular", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #ffffff;
-    text-decoration: none;
-
-    &:not(:first-child) {
-      margin-left: 20px;
-    }
-
-    &--light {
-      font-family: "Geometria-Thin", sans-serif;
-    }
-  }
-
-  &__icon {
-    fill: #ffffff;
-    width: 22px;
-    height: 22px;
-
-    &--mail {
-      width: 22px;
-      height: 17px;
-    }
-  }
 }
 
 .menu {
@@ -81,25 +29,84 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  width: 100%;
 
   &__item {
     list-style: none;
     margin: 0;
-    padding: 10px 15px;
-    border-bottom: 2px solid transparent;
+    padding: 0;
 
-    &:hover {
-      border-color: red;
+    &:hover > .dropdown-menu {
+      display: block;
+      visibility: visible;
     }
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
     text-decoration: none;
-    display: inline-block;
-    //line-height: 90px;
     font-family: "Geometria-Regular", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     color: #2e2e2d;
     font-size: 16px;
+    padding: 28px 5px 26px;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: #c11717;
+      color: #c11717;
+    }
   }
 }
+
+.dropdown-menu {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  background: #ffffff;
+  left: 0;
+  right: 0;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.22);
+
+  li {
+    list-style: none;
+  }
+}
+
+.submenu {
+  height: 100%;
+  padding: 0 0 40px 0;
+  margin: 0;
+
+  &__item {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    font-family: "Geometria-Regular", sans-serif;
+    font-weight: 700;
+    color: #2e2e2d;
+    font-size: 16px;
+
+    &:hover {
+      color: #c11717;
+    }
+  }
+  &__title {
+    color: #c11717;
+    padding: 30px 0;
+  }
+}
+
+
+
+

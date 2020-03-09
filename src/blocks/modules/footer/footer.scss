@@ -1,0 +1,26 @@
+.footer {
+  background-color: #2e2e2d;
+  padding: 30px 0 50px 0;
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  &__copyright {
+    font-family: "Geometria-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  &__adress {
+    font-family: "Geometria-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 0;
+    margin: 35px 0 0 0;
+  }
+}

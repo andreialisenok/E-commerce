@@ -1,122 +1,134 @@
 <header class="header">
     <div class="header__top">
-        <div class="container">
-            <div class="row">
-                <h2 class="header__slogan">Только качественные решения</h2>
-                <ul class="header__contact contact">
-                    <li class="contact__item">
-                        <svg class="contact__icon">
-                            <use xlink:href="./img/sprites/sprite.svg#call-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="tel: +37517317-71-71"><span
-                                class="contact__link--light">+375 17</span> 317-71-71</a>
-                    </li>
-                    <li class="contact__item">
-                        <svg class="contact__icon">
-                            <use xlink:href="./img/sprites/sprite.svg#call-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="tel: +37544722-91-66"><span
-                                class="contact__link--light">+375 44</span> 722-91-66</a>
-                    </li>
-                    <li class="contact__item">
-                        <svg class="contact__icon contact__icon--mail">
-                            <use xlink:href="./img/sprites/sprite.svg#mail-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="mailto: info@solver.by">info@solver.by</a>
-                    </li>
-                </ul>
-            </div>
-
+        <div class="container flex">
+            <h2 class="header__slogan">Только качественные решения</h2>
+            @@include("../contact/contact.html")
         </div>
-
-
     </div>
 
 
     <div class="header__bottom">
-        <div class="container">
-            <div class="row">
-                <a href="#">
-                    <img src="./img/logo.png" class="header__logo">
-                </a>
-                <ul class="header__menu menu">
-                    <li class="menu__item">
-                        <a class="menu__link" href="">Наша <br>
-                        продукция</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">Строительство <br>
-                            каркасных <br> домов</a>
-
-
-<!--                        <ul>-->
-<!--                            <li>Монтаж домокомплектов</li>-->
-<!--                            <li>Монтаж панелей стен и перегородок</li>-->
-<!--                            <li>Монтаж панелей перекрытий</li>-->
-<!--                            <li>Монтаж кровельных панелей</li>-->
-<!--                        </ul>-->
-<!--                        <ul>-->
-<!--                            <li>Устройство фундаментов</li>-->
-<!--                            <li>Свайно-ростверковый фундамент</li>-->
-<!--                            <li>Столбчатый фундамент</li>-->
-<!--                            <li>Свайно-винтовой фундамент</li>-->
-<!--                        </ul>-->
-<!--                        <ul>-->
-<!--                            <li>Кровельные работы</li>-->
-<!--                            <li>Металлочерепица</li>-->
-<!--                            <li>б) Битумная кровля</li>-->
-<!--                            <li>Фальцевая кровля</li>-->
-<!--                        </ul>-->
-<!--                        <ul>-->
-<!--                            <li>Устройство перекрытий из двутавровой балки</li>-->
-<!--                            <li>Цокольное перекрытие</li>-->
-<!--                            <li>Междуэтажное перекрытие</li>-->
-<!--                            <li>Чердачное перекрытие</li>-->
-<!--                        </ul>-->
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            Индивидуальное
-                            проектирование
-                        </a>
-
-<!--                        <ul>-->
-<!--                            <li>Услуги по проектированию</li>-->
-<!--                            <li>Разработка рабочей документации</li>-->
-<!--                        </ul>-->
-
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            Готовые проекты и цены
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-
-                            Сопутствующие <br> строительные <br> материалы
-
-                        </a>
-<!--                        <ul>-->
-<!--                            <li>ОСП, плёнки, утеплитель </li>-->
-<!--                            <li>Элементы каркасного домостроения: стойки, обвязка</li>-->
-<!--                        </ul>-->
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            Контакты
-                        </a>
-<!--                        <ul>-->
-<!--                            <li>О нас</li>-->
-<!--                            <li>Статьи</li>-->
-<!--                            <li>Порядок работы с нами</li>-->
-<!--                            <li>Галерея</li>-->
-<!--                        </ul>-->
-                    </li>
-                </ul>
-            </div>
+        <div class="container flex">
+            @@include("../logo/logo.html")
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <span>Наша <br> продукция</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <span>Строительство каркасных <br> домов</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="container flex">
+                            <ul class="submenu">
+                                <li class="submenu__item"><a href="#" class="submenu__link submenu__title"><span>Монтаж домокомплектов</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Монтаж панелей стен и перегородок</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Монтаж панелей перекрытий</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Монтаж кровельных панелей</span></a>
+                                </li>
+                            </ul>
+                            <ul class="submenu">
+                                <li class="submenu__item"><a href="#" class="submenu__link submenu__title"><span>Устройство фундаментов</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Свайно-ростверковый фундамент</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#"
+                                                             class="submenu__link"><span>Столбчатый фундамент</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Свайно-винтовой фундамент</span></a>
+                                </li>
+                            </ul>
+                            <ul class="submenu">
+                                <li class="submenu__item"><a href="#" class="submenu__link submenu__title"><span>Кровельные работы</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Металлочерепица</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Битумная кровля</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#"
+                                                             class="submenu__link"><span>Фальцевая кровля</span></a>
+                                </li>
+                            </ul>
+                            <ul class="submenu">
+                                <li class="submenu__item"><a href="#" class="submenu__link submenu__title"><span>Устройство перекрытий из <br> двутавровой балки</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#"
+                                                             class="submenu__link"><span>Цокольное перекрытие</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#" class="submenu__link"><span>Междуэтажное перекрытие</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="#"
+                                                             class="submenu__link"><span>Чердачное перекрытие</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <span>Индивидуальное <br> проектирование</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="container flex">
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link"><span>Услуги по проектированию</span></a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link"><span>Разработка рабочей документации</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <span>Готовые проекты <br> и цены</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <span>Сопутствующие <br> строительные <br> материалы</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="container flex">
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link"><span>
+                                        ОСП, плёнки, утеплитель
+                                    </span></a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="" class="submenu__link"><span>
+                                        Элементы каркасного домостроения: стойки, обвязка
+                                    </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <span>Контакты</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="container flex">
+                            <ul class="submenu">
+                                <li class="submenu__item"><a href="" class="submenu__link"><span>О нас</span></a></li>
+                                <li class="submenu__item"><a href="" class="submenu__link"><span>Статьи</span></a></li>
+                                <li class="submenu__item"><a href=""
+                                                             class="submenu__link"><span>Порядок работы с нами</span></a>
+                                </li>
+                                <li class="submenu__item"><a href="" class="submenu__link"><span>Галерея</span></a></li>
+                            </ul>
+                    </ul>
+                </li>
+            </ul>
         </div>
-
-
     </div>
 </header>

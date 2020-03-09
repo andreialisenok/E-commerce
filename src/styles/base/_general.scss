@@ -1,11 +1,23 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+* {
+    box-sizing: border-box;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1160px;
+    max-width: 1190px;
+    min-width: 320px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
