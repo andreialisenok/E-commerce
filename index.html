@@ -1,582 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>gulp-scss-starter</title>
+    <title>E-commerce</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header class="header">
-        <div class="header__top">
-            <div class="container flex">
-                <h2 class="header__slogan">Только качественные решения</h2>
-                <ul class="header__contact contact">
-                    <li class="contact__item">
-                        <svg class="contact__icon">
-                            <use xlink:href="./img/sprites/sprite.svg#call-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="tel: +37517317-71-71"><span class="contact__link--light">+375
-                                17</span> 317-71-71</a>
-                    </li>
-                    <li class="contact__item">
-                        <svg class="contact__icon">
-                            <use xlink:href="./img/sprites/sprite.svg#call-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="tel: +37544722-91-66"><span class="contact__link--light">+375
-                                44</span> 722-91-66</a>
-                    </li>
-                    <li class="contact__item">
-                        <svg class="contact__icon contact__icon--mail">
-                            <use xlink:href="./img/sprites/sprite.svg#mail-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="mailto: info@solver.by">info@solver.by</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="header__bottom">
-            <div class="container flex">
-                <a href="#" class="header__logo">
-                    <img src="./img/Logo.png" class="logo">
-                </a>
-                <ul class="menu">
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            <span class="menu__link-text">Наша <br> продукция</span>
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            <span class="menu__link-text">Строительство <br> каркасных домов</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="container flex">
-                                <ul class="submenu">
-                                    <li class="submenu__item"><a href="#"
-                                            class="submenu__link submenu__title"><span>Монтаж домокомплектов</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Монтаж панелей
-                                                стен и перегородок</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Монтаж панелей
-                                                перекрытий</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Монтаж кровельных
-                                                панелей</span></a>
-                                    </li>
-                                </ul>
-                                <ul class="submenu">
-                                    <li class="submenu__item"><a href="#"
-                                            class="submenu__link submenu__title"><span>Устройство фундаментов</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#"
-                                            class="submenu__link"><span>Свайно-ростверковый фундамент</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Столбчатый
-                                                фундамент</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Свайно-винтовой
-                                                фундамент</span></a>
-                                    </li>
-                                </ul>
-                                <ul class="submenu">
-                                    <li class="submenu__item"><a href="#"
-                                            class="submenu__link submenu__title"><span>Кровельные работы</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#"
-                                            class="submenu__link"><span>Металлочерепица</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Битумная
-                                                кровля</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Фальцевая
-                                                кровля</span></a>
-                                    </li>
-                                </ul>
-                                <ul class="submenu">
-                                    <li class="submenu__item"><a href="#"
-                                            class="submenu__link submenu__title"><span>Устройство перекрытий из <br>
-                                                двутавровой балки</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Цокольное
-                                                перекрытие</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Междуэтажное
-                                                перекрытие</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="#" class="submenu__link"><span>Чердачное
-                                                перекрытие</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            <span class="menu__link-text">Индивидуальное <br> проектирование</span>
-                        </a>
-                        <ul class="menu__dropdown dropdown-menu">
-                            <li class="container flex">
-                                <ul class="submenu">
-                                    <li class="submenu__item">
-                                        <a href="" class="submenu__link"><span>Услуги по проектированию</span></a>
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a href="" class="submenu__link"><span>Разработка рабочей
-                                                документации</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            <span class="menu__link-text">Готовые проекты <br> и цены</span>
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            <span class="menu__link-text">Сопутствующие <br> строительные <br> материалы</span>
-                        </a>
-                        <ul class="menu__dropdown dropdown-menu">
-                            <li class="container flex">
-                                <ul class="submenu">
-                                    <li class="submenu__item">
-                                        <a href="" class="submenu__link"><span>
-                                                ОСП, плёнки, утеплитель
-                                            </span></a>
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a href="" class="submenu__link"><span>
-                                                Элементы каркасного домостроения: стойки, обвязка
-                                            </span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="">
-                            <span class="menu__link-text">Контакты</span>
-                        </a>
-                        <ul class="menu__dropdown dropdown-menu">
-                            <li class="container flex">
-                                <ul class="submenu">
-                                    <li class="submenu__item"><a href="" class="submenu__link"><span>О нас</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="" class="submenu__link"><span>Статьи</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="" class="submenu__link"><span>Порядок работы с
-                                                нами</span></a>
-                                    </li>
-                                    <li class="submenu__item"><a href="" class="submenu__link"><span>Галерея</span></a>
-                                    </li>
-                                </ul>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-
-    <div class="banner" style="background-image: url(./img/banner.jpg); background-repeat: no-repeat; background-size: cover;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
         <div class="container">
-            <h1 class="title-1">Каркасные дома под ключ</h1>
-            <ul class="subtitle-list">
-                <li class="subtitle-list-item">Собственное производство;</li>
-                <li class="subtitle-list-item">Высокая скорость возведения;</li>
-                <li class="subtitle-list-item">Долговечность и абсолютная экологичность;</li>
-            </ul>
-            <button class="btn">Получить консультацию</button>
-            <p class="info">Мы свяжемся с Вами <span class="text-bold">в течение 15 минут</span></p>
+          <div class="header__content">
+            <button class="header__burger" type="button"><img src="assets/img/icon-menu.svg"></button><a class="header__logo" href="#"><img src="assets/img/logo.svg"></a>
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="#">Collections</a></li>
+                <li class="header__item"><a class="header__link" href="#">Men</a></li>
+                <li class="header__item"><a class="header__link" href="#">Women</a></li>
+                <li class="header__item"><a class="header__link" href="#">About</a></li>
+                <li class="header__item"><a class="header__link" href="#">Contact</a></li>
+              </ul>
+              <div class="header__overlay"></div>
+            </nav>
+            <div class="header__actions"><a class="header__basket" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+<path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"/>
+</svg><span class="header__count">0</span></a><a class="header__user" href="#"><img src="assets/img/image-avatar.png" alt="Avatar"></a></div>
+            <div class="header__cart cart">
+              <p class="cart__title">Cart</p>
+              <p class="cart__message">Your cart is empty.</p>
+              <div class="cart__wrap"></div>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="projects">
-        <div class="container">
-            <h2 class="title-2">Наши проекты</h2>
-            <div class="project-slider">
-                <div class="project-slider-arrowleft"><img src="./img/svg/left-arrow_red.svg" alt=""></div>
-                <div class="project-item">
-                    <div class="project-item__img">
-                        <img src="./img/project/1.png" alt="">
-                    </div>
-                    <div class="project-item__title">Эрвин</div>
-                    <div class="project-item__hover">
-                        <div class="project-item__name">Эрвин</div>
-                        <div class="project-item__desc">
-                            <div class="project-item__desc-room">3 комнаты</div>
-                            <div class="project-item__desc-size">115 м2</div>
-                            <div class="project-item__desc-price">15000 BYN</div>
-                        </div>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                </div> 
-                <div class="project-item">
-                    <div class="project-item__img">
-                        <img src="./img/project/2.png" alt="">
-                    </div>
-                    <div class="project-item__title">Платон</div>
-                    <div class="project-item__hover">
-                        <div class="project-item__name">Платон</div>
-                        <div class="project-item__desc">
-                            <div class="project-item__desc-room">3 комнаты</div>
-                            <div class="project-item__desc-size">115 м2</div>
-                            <div class="project-item__desc-price">15000 BYN</div>
-                        </div>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                </div> 
-                <div class="project-item">
-                    <div class="project-item__img">
-                        <img src="./img/project/3.png" alt="">
-                    </div>
-                    <div class="project-item__title">Клюква</div>
-                    <div class="project-item__hover">
-                        <div class="project-item__name">Клюква</div>
-                        <div class="project-item__desc">
-                            <div class="project-item__desc-room">3 комнаты</div>
-                            <div class="project-item__desc-size">115 м2</div>
-                            <div class="project-item__desc-price">15000 BYN</div>
-                        </div>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                </div> 
-                <div class="project-slider-arrowright"><img src="./img/svg/right-arrow_red.svg" alt=""></div>
+      </header>
+      <main class="gallery">
+        <div class="gallery__products">
+          <div class="gallery__carousel">
+            <div class="gallery__lightbox">
+              <div class="gallery__product"><img src="assets/img/image-product-1.jpg" alt="Product"></div>
+              <div class="gallery__button-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+<path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none"/>
+</svg>
+              </div>
+              <div class="gallery__button-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 18">
+<path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none"/>
+</svg>
+              </div>
             </div>
-            <button class="btn btn-light">Посмотреть все проекты</button>
+            <div class="gallery__thumbs thumbs">
+              <div class="thumbs__product active"><img src="assets/img/image-product-1.jpg" alt="Product"></div>
+              <div class="thumbs__product"><img src="assets/img/image-product-2.jpg" alt="Product"></div>
+              <div class="thumbs__product"><img src="assets/img/image-product-3.jpg" alt="Product"></div>
+              <div class="thumbs__product"><img src="assets/img/image-product-4.jpg" alt="Product"></div>
+            </div>
+          </div>
+          <div class="gallery__info">
+            <h3 class="gallery__company">Sneaker Company</h3>
+            <h2 class="gallery__title">Fall Limited Edition Sneakers</h2>
+            <p class="gallery__subtitle">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            <div class="gallery__price">
+              <p class="gallery__now">$125.00</p>
+              <p class="gallery__sale">50%</p>
+              <p class="gallery__old">$250.00</p>
+            </div>
+            <div class="gallery__actions">
+              <div class="gallery__counter">
+                <button class="gallery__minus" type="button"><img src="assets/img/icon-minus.svg" alt="minus"></button><span class="gallery__quantity">1</span>
+                <button class="gallery__plus" type="button"><img src="assets/img/icon-plus.svg" alt="plus"></button>
+              </div>
+              <button class="gallery__add-to-cart" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+<path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D"/>
+</svg>Add to cart
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="stock" style="background-image: url(./img/stock.jpg); background-repeat: no-repeat; background-size: cover;">
-        <div class="container">
-            <h2 class="title-2 title-stock">Акции</h2>
-            <div class="stock-wrapper">
-                <div class="stock-block stock-left" style="background-image: url(./img/bonus_1.png); background-repeat: no-repeat;">
-                    <p class="stock-title">Железная дверь</p>
-                    <p class="stock-gift">В подарок</p>
-                    <p class="stock-desc">При оформлении заказа в течение 2-х дней после звонка</p>
-                </div>
-                <div class="stock-block stock-right" style="background-image: url(./img/bonus_2.png); background-repeat: no-repeat;">
-                    <p class="stock-title">Проект</p>
-                    <p class="stock-gift">В подарок</p>
-                    <p class="stock-desc">При оформлении заказа до конца февраля</p>
-                </div>
-            </div>
+      </main>
+      <div class="overlay hidden">
+        <div class="overlay__lightbox">
+          <div class="overlay__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15">
+<path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/>
+</svg>
+          </div>
         </div>
+      </div>
     </div>
-
-    <div class="benefits">
-        <div class="container">
-            <h2 class="title-2">Наши преимущества</h2>
-            <div class="benefits-bg-img">
-                <img src="img/osb.png" alt="">
-            </div>
-            <div class="benefits-block">
-                <div class="benefits-row">
-                    <div class="benefits-item">
-                        <div class="benefit-icon">
-                            <img src="img/8.png" alt="">
-                        </div>
-                        <div class="benefit-text">
-                            <div class="benefit-title">Опыт</div>
-                            <div class="benefit-desc">Строим каркасные дома под ключ уже более 10 лет</div>
-                        </div>
-                    </div>
-                    <div class="benefits-item">
-                        <div class="benefit-icon">
-                            <img src="img/14.png" alt="">
-                        </div>
-                        <div class="benefit-text">
-                            <div class="benefit-title">Короткие сроки</div>
-                            <div class="benefit-desc">От начала работ до готового дома всего 17 дней</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="benefits-row">
-                    <div class="benefits-item">
-                        <div class="benefit-icon">
-                            <img src="img/11.png" alt="">
-                        </div>
-                        <div class="benefit-text">
-                            <div class="benefit-title">Гарантия</div>
-                            <div class="benefit-desc">Даем гарантии на материалы и выполненные нами работы</div>
-                        </div>
-                    </div>
-                    <div class="benefits-item">
-                        <div class="benefit-icon">
-                            <img src="img/10.png" alt="">
-                        </div>
-                        <div class="benefit-text">
-                            <div class="benefit-title">Надежность</div>
-                            <div class="benefit-desc">Более сотни успешно выполненных проектов</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="benefits-row">
-                    <div class="benefits-item">
-                        <div class="benefit-icon">
-                            <img src="img/13.png" alt="">
-                        </div>
-                        <div class="benefit-text">
-                            <div class="benefit-title">Качество</div>
-                            <div class="benefit-desc">У нас собственное производство, поэтому мы следм за качеством на всх этапах строительства</div>
-                        </div>
-                    </div>
-                    <div class="benefits-item">
-                        <div class="benefit-icon">
-                            <img src="img/9.png" alt="">
-                        </div>
-                        <div class="benefit-text">
-                            <div class="benefit-title">Свои бригады</div>
-                            <div class="benefit-desc">Работаем без посредников, мы профессионалы своего дела</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="production">
-    </div>
-
-    <div class="product">
-        <div class="container">
-            <h2 class="title-2">Наша продукция</h2>
-            <div class="product-row">
-                <div class="product-item-wrapper">
-                    <div class="product-item-description">
-                        <div class="product-header">Деревянные двутавровые балки</div>
-                        <ul class="product-list">
-                            <li>Доска фасадная</li>
-                            <li>Имитация бруса</li>
-                            <li>Доска пола</li>
-                        </ul>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                    <div class="product-item product-item-short">
-                        <img src="./img/product/prod1.png" alt="">
-                        <div class="product-title">Деревянные двутавровые балки</div>
-                    </div>
-                </div>
-                <div class="product-item-wrapper">
-                    <div class="product-item-description">
-                        <div class="product-header">Домокомплекты</div>
-                        <ul class="product-list">
-                            <li>Доска фасадная</li>
-                            <li>Имитация бруса</li>
-                            <li>Доска пола</li>
-                        </ul>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                    <div class="product-item product-item-short">
-                        <img src="./img/product/prod2.png" alt="">
-                        <div class="product-title">Домокомплекты</div>
-                    </div>
-                </div>
-                <div class="product-item-wrapper">
-                    <div class="product-item-description">
-                        <div class="product-header">Писломатериалы</div>
-                        <ul class="product-list">
-                            <li>Доска фасадная</li>
-                            <li>Имитация бруса</li>
-                            <li>Доска пола</li>
-                        </ul>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                    <div class="product-item product-item-short">
-                        <img src="./img/product/prod3.png" alt="">
-                        <div class="product-title">Писломатериалы</div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-row">
-                <div class="product-item-wrapper">
-                    <div class="product-item-description">
-                        <div class="product-header">Отделочные материалы собственного производства</div>
-                        <ul class="product-list">
-                            <li>Доска фасадная</li>
-                            <li>Имитация бруса</li>
-                            <li>Доска пола</li>
-                        </ul>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                    <div class="product-item product-item-long">
-                        <img src="./img/product/prod4.png" alt="">
-                        <div class="product-title">Отделочные материалы собственного производства</div>
-                    </div>
-                </div>
-                <div class="product-item-wrapper">
-                    <div class="product-item-description">
-                        <div class="product-header">Дополнительные услуши производства</div>
-                        <ul class="product-list">
-                            <li>Доска фасадная</li>
-                            <li>Имитация бруса</li>
-                            <li>Доска пола</li>
-                        </ul>
-                        <div class="btn btn-card"><a href="">Подробнее</a></div>
-                    </div>
-                    <div class="product-item product-item-long">
-                        <img src="./img/product/prod5.png" alt="">
-                        <div class="product-title">Дополнительные услуши производства</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="steps" style="background-image: url(./img/steps.png); background-repeat: no-repeat; background-size: cover;">
-        <div class="container">
-            <h2 class="title-2 title-steps">Новый дом под ключ за 17 дней</h2>
-            <div class="steps-wrapper">
-                <div class="steps-item">
-                    <div class="step-img">
-                        <img src="./img/16.png" alt="">
-                    </div>
-                    <div class="step-title">Консультация</div>
-                    <div class="step-desc">Консультируем по всем вопросам, даем ценные рекомандации. Оцениваем провект и заключаем договор.</div>
-                </div>
-                <div class="steps-item">
-                    <div class="step-img">
-                        <img src="./img/17.png" alt="">
-                    </div>
-                    <div class="step-title">Проектирование</div>
-                    <div class="step-desc">Разрабатываем проект вашего дома. Согласовываем все детали.</div>
-                </div>
-                <div class="steps-item">
-                    <div class="step-img">
-                        <img src="./img/18.png" alt="">
-                    </div>
-                    <div class="step-title">Подготовка</div>
-                    <div class="step-desc">Заготавливаем лес. Изготавливаем ваш дом на собственной строительной площадке.</div>
-                </div>
-                <div class="steps-item">
-                    <div class="step-img">
-                        <img src="./img/15.png" alt="">
-                    </div>
-                    <div class="step-title">Строительство</div>
-                    <div class="step-desc">Доставляем и монтируем ваш новый дом.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="./img/image_block_seo.jpg" alt="">
-                </div>
-                <div class="about-title">Теплый дом из бруса: сплошные преимущества!</div>
-                <p>С каждым днем количество желающих купить дома из профилированного бруса в Минске неуклонно растет. В чем секрет популярности таких построек? Ответ на этот вопрос очевиден.</p>
-                <ul class="about-list">
-                    <li>Они экологичные и безопасные, поскольку выполняются из природного материала, богатого фитонцидами.</li>
-                    <li>Благодаря используемой технологии и применению схемы «шип-паз» практически не дают усадки.</li>
-                    <li>Отличаются внушительным сроком службы (не менее ста лет при правильной эксплуатации).</li>
-                    <li>Так как натуральная древесина выглядит очень декоративно, теплый дом из бруса не нуждается в дополнительной отделке. А качественная подгонка элементов конструкции на производстве позволяет обходиться без установки утеплителя, что дает существенную экономию при строительстве.</li>
-                    <li>Обеспечивают пользователям максимально комфортный микроклимат: в таком коттедже тепло зимой и прохладно летом, а стены не выделяют вредных для здоровья веществ.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="feedback">
-        <div class="container">
-            <h2 class="title-2 title-feedback">Остались вопросы?</h2>
-            <form action="" class="feedback-form">
-                <div class="feedback-wrapper">
-                    <div class="feedback-fields">
-                        <div class="feedback-item feedback-name">
-                            <div class="feedback-icon"><img src="./img/svg/user-icon_red.svg" alt=""></div>
-                            <input class="feedback-input" type="text" name="name" placeholder="Ваше имя">
-                        </div>
-                        <div class="feedback-item feedback-phone">
-                            <div class="feedback-icon"><img src="./img/svg/call-icon_red.svg" alt=""></div>
-                            <input class="feedback-input" type="phone" name="name" placeholder="+375(__) ___ __ __">
-                        </div>
-                        <div class="feedback-item feedback-mail">
-                            <div class="feedback-icon"><img src="./img/svg/mail-icon_red.svg" alt=""></div>
-                            <input class="feedback-input" type="email" name="name" placeholder="Ваше Email">
-                        </div>
-                    </div>
-                    <div class="feedback-message">
-                        <textarea name="maessage" placeholder="Ваше сообщение"></textarea>
-                    </div>
-                </div>
-                <input class="btn btn-submit" type="submit" value="Отправить сообщение">
-            </form>
-            <div class="feedback-info">Мы свяжемся с Вами <span class="text-bold">в течение 15 минут</span></div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container flex">
-
-            <div class="footer__left">
-                <a href="#" class="footer__logo">
-                    <img src="./img/Logo-white.png" class="logo">
-                </a>
-                <p class="footer__copyright">
-                    © 2020. Все права защищены
-                </p>
-            </div>
-
-            <div class="footer__right">
-                <ul class="header__contact contact">
-                    <li class="contact__item">
-                        <svg class="contact__icon">
-                            <use xlink:href="./img/sprites/sprite.svg#call-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="tel: +37517317-71-71"><span class="contact__link--light">+375
-                                17</span> 317-71-71</a>
-                    </li>
-                    <li class="contact__item">
-                        <svg class="contact__icon">
-                            <use xlink:href="./img/sprites/sprite.svg#call-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="tel: +37544722-91-66"><span class="contact__link--light">+375
-                                44</span> 722-91-66</a>
-                    </li>
-                    <li class="contact__item">
-                        <svg class="contact__icon contact__icon--mail">
-                            <use xlink:href="./img/sprites/sprite.svg#mail-icon"></use>
-                        </svg>
-                        <a class="contact__link" href="mailto: info@solver.by">info@solver.by</a>
-                    </li>
-                </ul>
-                <p class="footer__adress">ООО «Солвер Групп», Беларусь, г.Минск, пр-т Дзержинского 115, офис 447</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

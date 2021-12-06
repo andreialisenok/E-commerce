@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap')
+\:root
+  --white: #ffffff
+  --black: #000000
+  --orange: #FF7E1B
+  --dark-orange: #FFAB6A
+  --light-orange: #FFEEE2
+  --gray: #69707D
+  --light-gray: #B6BCC8
+  --dark-gray: #1D2026
+  --light: #F6F8FD
+  --shadow-button: 0 20px 50px -20px #FF7E1B
+  --shadow-cart: 0 20px 50px -20px rgba(29, 32, 38, 0.5)
+  --transition: all 0.3s ease-in-out
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  height: 100%
+  font-size: 62.5%
+
+body
+  height: 100%
+  font-family: 'Kumbh Sans', sans-serif
+  font-size: 1.6rem
+  line-height: 2.6rem
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  overflow: hidden
+  white-space: nowrap
+  border: 0
+  clip: rect(0 0 0 0)
+  clip-path: inset(100%)
+  -webkit-clip-path: inset(100%)
+
+.container
+  max-width: 1140px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 25px
+  padding-right: 25px
+
+.wrapper
+  height: 100%
+  width: 100%
+  position: relative
+  background: var(--white)
+
+.header
+  &__content
+    position: relative
+    display: flex
+    align-items: center
+    padding: 20px 0
+    @media (min-width: 768px)
+      padding: 30px 0
+      border-bottom: 1px solid var(--light-gray)
+
+  &__logo
+    cursor: pointer
+    width: 138px
+    height: 20px
+    @media (min-width: 768px)
+      margin-right: 55px
+
+  &__menu
+
+  &__list
+    width: 65%
+    height: 100%
+    background: var(--white)
+    position: fixed
+    left: 0
+    top: 0
+    padding: 90px 25px
+    transition: var(--transition)
+    transform: translateX(-100%)
+    opacity: 0
+
+    &.active
+      transform: translateX(0)
+      opacity: 10
+      z-index: 10
+
+    @media (min-width: 768px)
+      opacity: 1
+      color: var(--gray)
+      padding: 0
+      transform: none
+      width: auto
+      height: auto
+      position: static
+      display: flex
+      background: inherit
+
+  &__item
+    &:not(:last-child)
+      margin: 0 0 20px 0
+      @media (min-width: 768px)
+        margin: 0 30px 0 0
+
+  &__link
+    font-size: 1.8rem
+    line-height: 2.6rem
+    font-weight: 700
+    color: var(--dark-gray)
+    text-decoration: none
+    cursor: pointer
+    transition: var(--transition)
+
+    &:hover
+      color: var(--gray)
+
+    @media (min-width: 768px)
+      color: var(--gray)
+      font-size: 1.5rem
+      font-weight: 400
+      border-bottom: 4px solid transparent
+      padding-bottom: 41px
+      &:hover
+        color: var(--dark-gray)
+        border-color: var(--orange)
+
+  &__burger
+    display: block
+    cursor: pointer
+    outline: none
+    border: none
+    background: none
+    margin-right: 15px
+    z-index: 15
+
+    svg
+      width: 16px
+      height: 15px
+
+    @media (min-width: 768px)
+      display: none
+
+  &__actions
+    display: flex
+    align-items: center
+    margin-left: auto
+
+  &__basket
+    margin-right: 20px
+    width: 22px
+    height: 20px
+    position: relative
+    text-decoration: none
+    cursor: pointer
+
+    svg
+      fill: var(--gray)
+      transition: var(--transition)
+
+    &:hover svg
+      fill: var(--dark-gray)
+
+  &__count
+    font-size: 1rem
+    line-height: 1rem
+    color: var(--white)
+    background: var(--orange)
+    border-radius: 6.5px
+    position: absolute
+    top: -6px
+    right: -6px
+    display: none
+    align-items: center
+    justify-content: center
+    width: 19px
+    height: 13px
+
+    &.isOpen
+      display: flex
+
+  &__user
+    width: 28px
+    height: 28px
+    cursor: pointer
+    @media (min-width: 768px)
+      width: 50px
+      height: 50px
+
+    img
+      transition: var(--transition)
+      border: 2px solid transparent
+      border-radius: 50%
+
+      &:hover
+        border-color: var(--orange)
+
+  &__overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    width: 0
+    height: 100%
+    transition: var(--transition)
+    background: var(--black)
+    opacity: 0
+    z-index: 10
+
+    &.active
+      opacity: .75
+      width: 35%
+
+.cart
+  position: absolute
+  background: var(--white)
+  top: -300px
+  left: -15px
+  right: -15px
+  border-radius: 10px
+  transition: var(--transition)
+  box-shadow: var(--shadow-cart)
+  z-index: 5
+
+  &.isOpen
+    top: 75px
+    @media (min-width: 768px)
+      top: 90px
+
+  @media (min-width: 576px)
+    left: auto
+    width: 360px
+  @media (min-width: 1440px)
+    right: -75px
+
+  &__title
+    font-size: 1.6rem
+    line-height: 1.6rem
+    font-weight: 700
+    color: var(--dark-gray)
+    border-bottom: 1px solid var(--light-gray)
+    padding: 25px
+
+  &__message
+    font-size: 1.6rem
+    line-height: 2.6rem
+    font-weight: 700
+    color: var(--gray)
+    text-align: center
+    padding: 81px 0
+    display: block
+
+    &.hidden
+      display: none
+
+  &__wrap
+    display: none
+    padding: 25px 25px 30px
+
+    &.isOpen
+      display: block
+
+  &__info
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+
+  &__img
+    margin-right: 15px
+
+    img
+      width: 50px
+      height: 50px
+      border-radius: 4px
+
+  &__details
+
+  &__product-name
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: var(--gray)
+
+  &__amount
+    display: flex
+
+  &__price
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: var(--gray)
+    margin-right: 5px
+
+  &__multiply
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: var(--gray)
+    margin-right: 5px
+
+  &__count
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: var(--gray)
+    margin-right: 5px
+
+  &__total
+    font-size: 1.6rem
+    line-height: 2.6rem
+    font-weight: 700
+    color: var(--dark-gray)
+
+  &__delete
+    width: 14px
+    height: 16px
+    cursor: pointer
+    margin-left: auto
+
+    svg
+      fill: var(--light-gray)
+      transition: var(--transition)
+
+      &:hover
+        fill: var(--dark-gray)
+
+  &__checkout
+    cursor: pointer
+    font-size: 1.6rem
+    line-height: 1.6rem
+    font-weight: 700
+    color: var(--white)
+    background: var(--orange)
+    border-radius: 10px
+    outline: none
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 20px
+    width: 100%
+    transition: var(--transition)
+
+    &:hover
+      background: var(--dark-orange)
+
+.gallery
+  padding: 0 0 70px 0
+  @media (min-width: 768px)
+    padding: 90px 25px 130px
+    margin: 0 auto
+    max-width: 1000px
+
+  &__products
+    @media (min-width: 992px)
+      display: grid
+      grid-gap: 0 50px
+      grid-template-areas: 'lightbox info' 'thumbs info'
+      align-items: center
+      @media (min-width: 1440px)
+        grid-gap: 0 125px
+
+  &__lightbox
+    position: relative
+    @media (min-width: 768px)
+      grid-area: lightbox
+      margin-bottom: 30px
+
+  &__product
+    @media (min-width: 992px)
+      cursor: pointer
+    img
+      @media (min-width: 768px)
+        border-radius: 15px
+
+  &__button-prev
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    position: absolute
+    left: 16px
+    bottom: 50%
+    transform: translateY(50%)
+    transition: var(--transition)
+    background: var(--white)
+    cursor: pointer
+    @media (min-width: 992px)
+      display: none
+
+    &:hover
+      left: 20px
+
+    svg path
+      transition: var(--transition)
+
+    &:hover
+      svg path
+        stroke: var(--orange)
+
+    svg
+      width: 13px
+      height: 18px
+
+  &__button-next
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    position: absolute
+    right: 16px
+    bottom: 50%
+    transform: translateY(50%)
+    transition: var(--transition)
+    background: var(--white)
+    cursor: pointer
+    @media (min-width: 992px)
+      display: none
+
+    &:hover
+      right: 20px
+
+    svg path
+      transition: var(--transition)
+
+    &:hover
+      svg path
+        stroke: var(--orange)
+
+    svg
+      width: 13px
+      height: 18px
+
+  &__info
+    padding: 25px 25px 0
+    @media (min-width: 768px)
+      padding: 0
+      grid-area: info
+    @media (min-width: 992px)
+      max-width: 450px
+
+  &__company
+    font-size: 1.2rem
+    line-height: 1.2rem
+    letter-spacing: 0.185rem
+    text-transform: uppercase
+    font-weight: 700
+    color: var(--orange)
+    margin-bottom: 20px
+    @media (min-width: 768px)
+      font-size: 1.3rem
+      line-height: 1.3rem
+      letter-spacing: 0.2rem
+      margin-bottom: 25px
+
+  &__title
+    font-size: 2.8rem
+    line-height: 3.2rem
+    font-weight: 700
+    color: var(--dark-gray)
+    margin-bottom: 15px
+    @media (min-width: 768px)
+      font-size: 4.4rem
+      line-height: 4.8rem
+      margin-bottom: 30px
+
+  &__subtitle
+    font-size: 1.5rem
+    line-height: 2.5rem
+    color: var(--gray)
+    margin-bottom: 25px
+    @media (min-width: 768px)
+      font-size: 1.6rem
+      line-height: 2.6rem
+
+  &__price
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+    @media (min-width: 768px)
+      margin-bottom: 30px
+    @media (min-width: 992px)
+      display: grid
+      grid-template-areas: 'now sale' 'old .'
+      justify-content: flex-start
+      grid-gap: 10px 15px
+
+  &__now
+    font-size: 2.8rem
+    line-height: 2.8rem
+    font-weight: 700
+    color: var(--dark-gray)
+    margin-right: 15px
+    @media (min-width: 992px)
+      grid-area: now
+      margin-right: 0
+
+  &__sale
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 1.6rem
+    line-height: 1.6rem
+    font-weight: 700
+    color: var(--orange)
+    background: var(--light-orange)
+    border-radius: 6px
+    padding: 6px 10px
+    @media (min-width: 992px)
+      grid-area: sale
+
+  &__old
+    font-size: 1.6rem
+    line-height: 2.6rem
+    font-weight: 700
+    color: var(--light-gray)
+    margin-left: auto
+    text-decoration: line-through
+    @media (min-width: 992px)
+      grid-area: old
+      margin-left: 0
+
+  &__actions
+    @media (min-width: 576px)
+      display: flex
+
+  &__counter
+    border-radius: 10px
+    background: var(--light)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 15px
+    padding: 18px 25px
+    @media (min-width: 576px)
+      margin-bottom: 0
+      margin-right: 15px
+      flex: 1 0 auto
+      width: 50%
+    @media (min-width: 992px)
+      width: 160px
+  &__minus
+    cursor: pointer
+    outline: none
+    border: none
+    background: transparent
+    color: var(--orange)
+    width: 20px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 700
+
+  &__plus
+    cursor: pointer
+    outline: none
+    border: none
+    background: transparent
+    color: var(--orange)
+    width: 20px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__quantity
+    font-size: 1.6rem
+    line-height: 1.6rem
+    color: var(--dark-gray)
+    font-weight: 700
+
+  &__add-to-cart
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    outline: none
+    border: none
+    border-radius: 10px
+    background: var(--orange)
+    box-shadow: var(--shadow-button)
+    transition: var(--transition)
+    color: var(--white)
+    padding: 20px
+    font-weight: 700
+    font-size: 1.6rem
+    line-height: 1.6rem
+    @media (min-width: 768px)
+      box-shadow: inherit
+
+    &:hover
+      background: var(--dark-orange)
+
+    svg
+      height: 16px
+      margin-right: 15px
+
+      path
+        fill: var(--white)
+
+.thumbs
+  display: none
+  @media (min-width: 992px)
+    display: flex
+    grid-area: thumbs
+    justify-content: space-between
+    &__product
+      width: 20%
+      border: 2px solid transparent
+      border-radius: 15px
+      overflow: hidden
+      position: relative
+      @media (min-width: 992px)
+        cursor: pointer
+      &:hover::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        background: var(--white)
+        opacity: 0.5
+      &.active
+        border: 2px solid var(--orange)
+        &::before
+          position: absolute
+          content: ''
+          width: 100%
+          height: 100%
+          background: var(--white)
+          opacity: 0.75
+
+.overlay
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: rgba(0, 0, 0, 0.75)
+  &__close
+    margin: 0 0 25px auto
+    width: 20px
+    height: 20px
+    cursor: pointer
+    svg
+      fill: var(--white)
+      transition: var(--transition)
+      &:hover
+        fill: var(--orange)
+  &.hidden
+    display: none
+  &__lightbox
+    max-width: 550px
+    .gallery__button-prev
+      display: flex
+      left: 0
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 56px
+      height: 56px
+    .gallery__button-next
+      display: flex
+      right: 0
+      top: 50%
+      transform: translate(50%, -50%)
+      width: 56px
+      height: 56px
+    .gallery__product
+      cursor: auto
