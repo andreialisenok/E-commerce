@@ -1,4 +1,4 @@
-# Clock App
+# E-commerce
 
 ## Table of contents
 
@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/andreialisenok/Clock-app)
-- [Live Site URL](https://clock-app-weld.vercel.app/)
+- [Solution URL](https://github.com/andreialisenok/E-commerce)
+- [Live Site URL](https://e-commerce-sepia-alpha.vercel.app/)
 
 ## My process
 
